@@ -3,9 +3,9 @@ import React from 'react'
 import classNames from 'classnames';
 
 export default function MyButton(props) {
-  const { clsName, ...rest} = props;
+  const cls = (props.clsName) ?? classNames(props.clsName)
   return (
-    <TouchableHighlight className={classNames(clsName)} {...props}>
+    <TouchableHighlight className={cls} {...props}>
         {props.children}
     </TouchableHighlight>
   )

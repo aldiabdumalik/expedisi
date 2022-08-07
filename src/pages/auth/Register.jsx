@@ -36,7 +36,7 @@ const Register = () => {
                   <Input placeholder="Password" password />
                 </FormGroup>
                 <FormGroup>
-                  <MyTxt clsName="text-sm font-normal" style={{ color: colors.neutral.main }}>
+                  <MyTxt clsName="text-sm font-normal" style={{ color: colors.neutral.caption }}>
                     Minimal 8 karakter dengan kombinasi angka dan huruf
                   </MyTxt>
                 </FormGroup>
@@ -47,14 +47,14 @@ const Register = () => {
                   <Input placeholder="Referral" />
                 </FormGroup>
                 <View className="flex flex-col" style={[styles.formControl]}>
-                  <MyButton clsName="block py-3 rounded-lg" onPress={() => alert()} style={{backgroundColor: mainColor}}>
+                  <MyButton clsName="block py-3 rounded-lg" onPress={() => alert()} style={{backgroundColor: colors.primary.main}}>
                     <MyTxt clsName="text-white text-center text-base">Daftar</MyTxt>
                   </MyButton>
                 </View>
                 <View className="flex flex-row gap-1 items-center justify-center">
                   <MyTxt clsName="text-sm">Sudah memiliki akun?</MyTxt>
                   <TouchableOpacity>
-                    <MyTxt clsName="text-sm font-semibold" style={{color: mainColor}}>Masuk disini</MyTxt>
+                    <MyTxt clsName="text-sm font-semibold" style={{color: colors.primary.main}}>Masuk disini</MyTxt>
                   </TouchableOpacity>
                 </View>
               </View>

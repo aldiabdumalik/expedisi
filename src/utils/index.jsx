@@ -14,11 +14,17 @@ const colors = {
         light: '#999999',
         main: '#595959',
         dark: '#1A1A1A',
+        primary: '#1A1A1A',
+        secondary: '#595959',
+        caption: '#999999',
     },
     gray: {
         light: '#F2F2F2',
         main: '#E6E6E6',
         dark: '#CCCCCC',
+        placeholder: '#CCCCCC',
+        divider: '#E6E6E6',
+        background: '#F2F2F2',
     },
     success: {
         light: '#EEFCF9',

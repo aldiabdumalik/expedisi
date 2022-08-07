@@ -8,13 +8,14 @@ const Input = (props) => {
     const [isFocused, setIsFocused] = useState(false)
     return (
         <View 
-            className="flex flex-row bg-white px-4 py-3 mt-1 border rounded-lg items-center"
+            className="flex flex-row bg-white px-4 py-3 mt-1 rounded-lg items-center"
             style={{
                 borderColor: props.error
                     ? colors.error.main
                     : isFocused
                     ? colors.primary.main
-                    : colors.gray.main
+                    : colors.gray.divider,
+                borderWidth: props.error ? 2 : 1
             }}>
             <TextInput 
                 style={[styles.input]} 
@@ -25,14 +26,14 @@ const Input = (props) => {
                 }}
                 onBlur={() => setIsFocused(false)}
                 {...props}
-                placeholderTextColor={colors.gray.dark}
-                selectionColor={colors.neutral.light}
+                placeholderTextColor={colors.gray.placeholder}
+                selectionColor={colors.neutral.secondary}
             />
             {props.password && (
             <TouchableOpacity onPress={() => setHidePassword(!hidePassword)}>
                 <Ionicons 
                     name={hidePassword ? 'ios-eye' : 'ios-eye-off'}
-                    style={{color: colors.neutral.main, fontSize: 22}}
+                    style={{color: colors.neutral.caption, fontSize: 22}}
                 />
             </TouchableOpacity>
             )}
@@ -50,6 +51,6 @@ const styles = StyleSheet.create({
         fontSize: 14,
         fontWeight: "400",
         fontFamily: 'Nunito',
-        color: colors.neutral.dark
+        color: colors.neutral.primary
     }
 })
