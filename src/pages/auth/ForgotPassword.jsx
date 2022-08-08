@@ -25,7 +25,7 @@ import {
   Header,
 } from "../../components/index";
 import Ionicons from "@expo/vector-icons/Ionicons";
-import { Waves1, Waves2 } from "../../assets/svg/index";
+import { Waves1, Waves2, SvgConfirmPass } from "../../assets/svg/index";
 import AuthStyle from "./AuthStyle";
 import { StatusBarHeight } from "../../utils/StatusBarHeight";
 
@@ -44,7 +44,10 @@ const ForgotPassword = ({ navigation }) => {
               <Input placeholder='Email Anda' autoComplete='off' />
             </FormGroup>
             <FormGroup>
-              <MyButton label='Kirim' onPress={() => alert()} />
+              <MyButton
+                label='Kirim'
+                onPress={() => navigation.navigate("ModalConfirm")}
+              />
             </FormGroup>
           </View>
           <StatusBar style='dark' />

@@ -41,5 +41,6 @@ const colors = {
     main: "#931A1A",
     dark: "#BF2222",
   },
+  background: "#FFFFFF",
 };
 export { screenWidth, screenHeight, mainColor, colors };
