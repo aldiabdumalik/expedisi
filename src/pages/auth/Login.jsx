@@ -58,7 +58,7 @@ const Login = ({ navigation }) => {
               style={[styles.formControl]}>
               <Link
                 label='Lupa Password?'
-                onPress={() => navigation.navigate("Register")}
+                onPress={() => navigation.navigate("ForgotPassword")}
               />
             </View>
             <View className='flex flex-col' style={[styles.formControl]}>
